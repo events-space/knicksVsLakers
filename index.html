@@ -41,9 +41,9 @@ https://templatemo.com/tm-594-nexus-flow
         <div class="nav-container">
             <a href="#top" class="logo">Networking Event</a>
             <ul class="nav-links">
+                <li><a href="#" id="navRegisterModal">Register</a></li>
                 <li><a href="#highlights">Event Highlights</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#register">Register</a></li>
             </ul>
             <button class="mobile-menu-button" id="mobileMenuBtn">
                 <div class="hamburger">
@@ -64,9 +64,9 @@ https://templatemo.com/tm-594-nexus-flow
         </div>
         <nav class="mobile-menu-nav">
             <ul>
+                <li><a href="#" id="mobileNavRegisterModal">Register</a></li>
                 <li><a href="#highlights">Event Highlights</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#register">Register</a></li>
             </ul>
         </nav>
     </div>
@@ -94,7 +94,7 @@ https://templatemo.com/tm-594-nexus-flow
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <img src="pic1.jpg" alt="Pic 1" class="stat-image">
+                    <img src="img1.jpg" alt="Image 1" class="stat-image">
                     <span class="stat-label">Exclusive dinner and premium Knicks game experience</span>
                 </div>
                 <div class="stat-item">
@@ -232,12 +232,53 @@ https://templatemo.com/tm-594-nexus-flow
         const modal = document.getElementById('registerModal');
         const registerForm = document.getElementById('registerForm');
 
-        // Open modal
+        // Function to open modal
+        function openModal() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Open modal from hero button
         if (openModalBtn) {
             openModalBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
+                openModal();
+            });
+        }
+
+        // Open modal from navigation Register link
+        const navRegisterModal = document.getElementById('navRegisterModal');
+        if (navRegisterModal) {
+            navRegisterModal.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal();
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+                    if (mobileMenuOverlay) {
+                        mobileMenuOverlay.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // Open modal from mobile navigation Register link
+        const mobileNavRegisterModal = document.getElementById('mobileNavRegisterModal');
+        if (mobileNavRegisterModal) {
+            mobileNavRegisterModal.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal();
+                // Close mobile menu
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+                    if (mobileMenuOverlay) {
+                        mobileMenuOverlay.classList.remove('active');
+                    }
+                }
             });
         }
 
