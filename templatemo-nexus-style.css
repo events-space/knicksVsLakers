@@ -1323,18 +1323,42 @@ https://templatemo.com/tm-594-nexus-flow
             .about-content-wrapper {
                 grid-template-columns: 1fr;
                 gap: 3rem;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .about-text {
+                width: 100%;
+                max-width: 100%;
+                padding: 2rem 1rem;
+                margin: 0;
             }
 
             .about-map {
+                width: 100%;
+                max-width: 100%;
                 min-height: 300px;
+                margin: 0;
+                padding: 0;
             }
 
             .map-container {
+                width: 100%;
+                max-width: 100%;
                 min-height: 300px;
+                margin: 0;
+                padding: 0;
             }
 
             .map-container iframe {
+                width: 100%;
+                max-width: 100%;
                 min-height: 300px;
+                margin: 0;
+                padding: 0;
             }
 
             .about-text .section-title {
@@ -1699,6 +1723,60 @@ https://templatemo.com/tm-594-nexus-flow
             .footer {
                 margin-top: 40px;
                 padding: 40px 1rem 30px;
+            }
+            
+            /* About Section Mobile Fixes */
+            .about-content-wrapper {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .about-text {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 2rem 1rem !important;
+                margin: 0 !important;
+                order: 1;
+            }
+
+            .about-map {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-height: 300px !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                order: 2;
+            }
+
+            .map-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-height: 300px !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            .map-container iframe {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-height: 300px !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+            
+            .pricing-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 1rem !important;
             }
         }
 
