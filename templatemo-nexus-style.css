@@ -1664,7 +1664,15 @@ https://templatemo.com/tm-594-nexus-flow
             }
             
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .stat-image {
+                width: 100%;
+                max-width: 440px;
+                height: auto;
+                aspect-ratio: 440 / 293;
             }
             
             .contact {
@@ -1992,5 +2000,83 @@ https://templatemo.com/tm-594-nexus-flow
                 top: 0.5rem;
                 right: 0.5rem;
                 font-size: 1.5rem;
+            }
+        }
+
+        /* Success Modal Styles */
+        .success-modal {
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .success-content {
+            padding: 2rem;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            animation: successPulse 0.6s ease-out;
+        }
+
+        @keyframes successPulse {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-title {
+            font-size: 2rem;
+            color: var(--primary-cyan);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .success-message {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .success-modal .btn-primary {
+            min-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .success-modal {
+                max-width: 90%;
+            }
+
+            .success-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .success-title {
+                font-size: 1.5rem;
+            }
+
+            .success-message {
+                font-size: 1rem;
             }
         }
